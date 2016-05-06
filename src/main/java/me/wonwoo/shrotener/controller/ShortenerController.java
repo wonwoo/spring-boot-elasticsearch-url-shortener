@@ -2,7 +2,6 @@ package me.wonwoo.shrotener.controller;
 
 import me.wonwoo.shrotener.domain.Sequence;
 import me.wonwoo.shrotener.domain.Url;
-import me.wonwoo.shrotener.domain.UrlDto;
 import me.wonwoo.shrotener.exception.UrlNotFoundException;
 import me.wonwoo.shrotener.repository.SequenceRepository;
 import me.wonwoo.shrotener.repository.UrlRepository;
