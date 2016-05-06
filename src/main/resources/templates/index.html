@@ -59,14 +59,14 @@
 <script src="http://code.jquery.com/jquery-1.11.0.min.js"></script>
 <script src="/js/bootstrap.min.js"></script>
 <script type="text/javascript">
-    var APP_URL = 'http://localhost:8080';
+    var APP_URL = location.protocol + location.host;
     $("#createUrl").submit(function (event) {
         event.preventDefault();
         var longUrl = $('#longUrl').val();
         var urlData = { "url" :  longUrl };
 
         $.ajax({
-            url: APP_URL + '/url'
+            url: '/url'
             , type: 'POST'
             , dataType: "json"
             , headers: {
