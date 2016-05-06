@@ -38,16 +38,16 @@ public class ShortenerController {
 
   @GetMapping("/{id}")
   @ResponseStatus(HttpStatus.MOVED_PERMANENTLY)
-  public String get(@PathVariable String id){
+  public String get(@PathVariable String id) {
     Url url = urlRepository.findOne(id);
-    if(url == null){
+    if (url == null) {
       throw new UrlNotFoundException(id);
     }
     return "redirect:" + url.getUrl();
   }
 
   @GetMapping("/")
-  public String url(){
+  public String url() {
     return "index";
   }
 }

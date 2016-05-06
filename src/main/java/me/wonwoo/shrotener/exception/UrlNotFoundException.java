@@ -11,7 +11,7 @@ public class UrlNotFoundException extends RuntimeException {
 
   private final String url;
 
-  public UrlNotFoundException(String url){
+  public UrlNotFoundException(String url) {
     this.url = url;
   }
 

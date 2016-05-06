@@ -11,21 +11,21 @@ import org.springframework.context.annotation.Bean;
 @SpringBootApplication
 public class Application {
 
-	public static void main(String[] args) {
-		SpringApplication.run(Application.class, args);
-	}
+  public static void main(String[] args) {
+    SpringApplication.run(Application.class, args);
+  }
 
-	@Autowired
-	private SequenceRepository sequenceRepository;
+  @Autowired
+  private SequenceRepository sequenceRepository;
 
-	@Bean
-	public CommandLineRunner commandLineRunner(){
-		return args -> {
-			Sequence sequence = sequenceRepository.findOne("urlShort");
-			if (sequence == null){
-				sequence = new Sequence("urlShort", 1L);
-				sequenceRepository.save(sequence);
-			}
-		};
-	}
+  @Bean
+  public CommandLineRunner commandLineRunner() {
+    return args -> {
+      Sequence sequence = sequenceRepository.findOne("urlShort");
+      if (sequence == null) {
+        sequence = new Sequence("urlShort", 1L);
+        sequenceRepository.save(sequence);
+      }
+    };
+  }
 }
