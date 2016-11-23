@@ -14,6 +14,3 @@
 
 ### browser
   - http://localhost:8080
-
-### demo
-  - http://wonwoo.ml:18814
